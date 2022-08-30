@@ -8,7 +8,7 @@ import { searchGames, sort, filterGameGenre, getGenres, filterGameCreated } from
 
 function Searchbar() {
     let dispatch = useDispatch();
-    const [search, setSearch] = useState('')
+    const [search, setSearch] = useState('');
     const genres = useSelector(state => state.genres);
 
     useEffect(() => {
@@ -20,11 +20,11 @@ function Searchbar() {
     }
 
     const onGenreFilterChange = e => {
-      dispatch(filterGameGenre(e.target.value))
+      dispatch(filterGameGenre(e.target.value));
     }
 
     const onCreatedFilterChange = e => {
-      dispatch(filterGameCreated(e.target.value))
+      dispatch(filterGameCreated(e.target.value));
     }
 
     const onChange =  e => {
@@ -35,14 +35,14 @@ function Searchbar() {
       e.preventDefault();
       if (search && search.trim().includes(" ")) {
         const searchTrans = search.split(" ").join("-").toLowerCase();
-        dispatch(searchGames(searchTrans))
+        dispatch(searchGames(searchTrans));
 
       }
       if (search === '') {
         dispatch(searchGames(search));
       }
       if (search) {
-        dispatch(searchGames(search.toLowerCase().trim()))
+        dispatch(searchGames(search.toLowerCase().trim()));
       }
     }
 
@@ -86,16 +86,8 @@ function Searchbar() {
                             )
                           })
                         }
-
-                        {/* {this.props.genres.map(genre => {
-                            return (
-                              <option value="">{genre}</option>
-                            )
-                        })} */}
                     </select>
                   </div>
-                  
-                  
                 </div>
             </form>
         </div>

@@ -1,7 +1,6 @@
 import React from 'react'
 import style from '../style/GameDetail.module.css';
 import { useEffect, useState} from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import mario from '../../img/mario3.jpg';
 import axios from 'axios';

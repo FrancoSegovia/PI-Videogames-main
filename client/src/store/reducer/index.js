@@ -45,7 +45,11 @@ const reducer = (state = initialState, { type, payload }) => {
       };
 
     case SORT:
-      let orderedGames = [...state.games];
+      let orderedGames;
+
+      if (state.filteredGames.length) orderedGames = [...state.filteredGames];
+      else orderedGames = [...state.games];
+
       orderedGames = orderedGames.sort((a, b) => {
         if (payload === ALFA_ASCENDENTE || payload === ALFA_DESCENDENTE) {
           if (a.name < b.name) return payload === ALFA_ASCENDENTE ? -1 : 1;

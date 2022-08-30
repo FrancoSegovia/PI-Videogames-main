@@ -88,7 +88,7 @@ router.get("/", async (req, res, next) => {
             let url;
             let apiResponse = [];
 
-            while(apiResponse.length < 100 ) {
+            while(apiResponse.length < 105 ) {
                 if (!apiResponse.length) {
                     url = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}`);
                     apiResponse = [...apiResponse, ...url.data.results]
@@ -100,15 +100,13 @@ router.get("/", async (req, res, next) => {
             }
 
             apiVideogames = apiResponse.map(vgame => {
-
+                
                 let allPlatforms = [];
                 vgame.platforms.forEach(platform => {
                     if (!allPlatforms.includes(platform.platform.name)) {
                         allPlatforms = [...allPlatforms, platform.platform.name];
                     }
                 });
-
-                // const allArraysPlatforms = vgame.platforms.filter(platform => platform)
 
                 return {
                     id:vgame.id,

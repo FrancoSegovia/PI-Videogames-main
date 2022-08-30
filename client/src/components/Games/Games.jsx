@@ -23,8 +23,8 @@ function Games() {
   
   
   useEffect(() => {
-    ref.current?.scrollIntoView({behavior: 'smooth'})
-    dispatch(fetchGames())
+    ref.current?.scrollIntoView({behavior: 'smooth'});
+    if (!games.length) dispatch(fetchGames());
   }, []);
 
   const previousPage = () => {
@@ -36,11 +36,12 @@ function Games() {
   };
 
   const nextPage = () => {
+
     if (paginaActual >= ultimaPagina ) setPaginaActual(ultimaPagina);
     else {
       setPaginaActual(paginaActual + 1);
       ref.current?.scrollIntoView({behavior: 'smooth'});
-      console.log(paginaActual);
+     
     }
   };
   

@@ -15,10 +15,7 @@ function App() {
         <Route exact path="/home" component={ Games } />
         <Route exact path="/create" component={ CreateGame } />
         <Route exact path="/home/:id" component={ GameDetail } />
-        {/* <Route exact path="/" component={Teams} />
-        <Route path="/otraRuta" component={TeamCard} />
-        <Route path="/teams/:teamId" component={TeamDetail} />
-        <Route exact path="/team/create" component={CreateTeam} /> */}
+        
     </div>
   );
 }

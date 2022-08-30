@@ -24,9 +24,7 @@ function Navbar() {
         </div>
         <div className={style.logoTitulo}>
             <img className={style.img} src={mushroom} alt="alt"/>
-            <h1>
-              <h1 to="/home" className={style.titulo} onClick={onClick}>TERCHGAMES</h1>
-            </h1>
+            <h1 to="/home" className={style.titulo} onClick={onClick}>TERCHGAMES</h1>
             <img className={style.img} src={mushroom} alt="alt"/>
         </div>
         <div>
