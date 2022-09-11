@@ -60,7 +60,7 @@ function Searchbar() {
                       <div className={style.filtroYLabel}>
                         <label htmlFor="">ORDEN ALFABÉTICO/RATING</label>
                         <select className={style.selector} name="" id="" onChange={onAscDescFilterChange}>
-                            <option value="Filter">TIPO DE FILTRO</option>
+                            <option value="Filter">TIPO DE ORDENAMIENTO</option>
                             <option value={ALFA_ASCENDENTE}>A-Z</option>
                             <option value={ALFA_DESCENDENTE}>Z-A</option>
                             <option value={RATING_ASCENDENTE}>RATING +</option>
@@ -68,7 +68,7 @@ function Searchbar() {
                         </select>
                       </div>
                       <div className={style.filtroYLabel}>
-                        <label htmlFor=""> TODOS/CREADO </label>
+                        <label htmlFor=""> FILTRO DE ORIGEN </label>
                         <select onChange={onCreatedFilterChange} className={style.selector} name="" id="">
                             <option value="TODOS">TODOS</option>
                             <option value="CREADOS POR TI">CREADOS POR TI</option>
@@ -76,7 +76,7 @@ function Searchbar() {
                       </div>
                   </div>
                   <div className={style.filtroYLabel}>
-                    <label htmlFor=""> GÉNERO </label>
+                    <label htmlFor=""> FILTRO POR GÉNERO </label>
                     <select onChange={onGenreFilterChange} className={style.genreSelector} name="" id="">
                       <option value="Genre">GÉNERO</option>
                         {

@@ -18,7 +18,7 @@
 
 .filtroYLabel {
     text-shadow: #FFF 0px 0px 1px, #FFF 0px 0px 1px, #FFF 0px 0px 1px, #FF2D95 0px 0px 1px, #FF2D95 0px 0px 1px, #FF2D95 0px 0px 2px, #FF2D95 0px 0px 2px, #FF2D95 0px 0px 10px;
-
+    margin-bottom:1px;
     font-size: 10px;
     display: flex;
     flex-direction: column;
