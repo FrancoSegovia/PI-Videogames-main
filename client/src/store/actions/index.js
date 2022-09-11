@@ -16,7 +16,7 @@ export const FILTER_BY_GAME_CREATED = 'FILTER_BY_GAME_CREATED';
 
 export function fetchGames() {
     return function(dispatch) {
-        axios.get("http://localhost:3001/api/videogames")
+        axios.get("https://terchgames.onrender.com/api/videogames")
         .then(games => {
             dispatch ({
                 type: GET_ALL_GAMES,
@@ -31,7 +31,7 @@ export function fetchGames() {
 
 export function searchGames(search) {
     return function(dispatch) {
-        axios.get(`http://localhost:3001/api/videogames?search=${search}`)
+        axios.get(`https://terchgames.onrender.com/api/videogames?search=${search}`)
         .then(games => {
             dispatch ({
                 type: SEARCH_GAMES,
@@ -46,7 +46,7 @@ export function searchGames(search) {
 
 export function getGenres() {
     return function(dispatch) {
-        axios.get(`http://localhost:3001/api/genres`)
+        axios.get(`https://terchgames.onrender.com/api/genres`)
         .then(genres => {
             dispatch ({
                 type: GET_GENRES,
@@ -61,7 +61,7 @@ export function getGenres() {
 
 export function postGame(game) {
     return function() {
-        axios.post(`http://localhost:3001/api/videogames`, game);
+        axios.post(`https://terchgames.onrender.com/api/videogames`, game);
     }
 }
 
