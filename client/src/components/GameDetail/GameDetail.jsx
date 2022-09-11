@@ -12,7 +12,7 @@ function GameDetail(props) {
 
 
     useEffect(() => {
-        axios.get(`https://https://terchgames.onrender.com/api/videogames/${gameId}`)
+        axios.get(`http://localhost:3001/api/videogames/${gameId}`)
         .then(game => setGame(game.data));
         
         return () => setGame(null);
