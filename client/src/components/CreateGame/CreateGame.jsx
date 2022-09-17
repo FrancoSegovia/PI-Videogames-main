@@ -159,6 +159,7 @@ function CreateGame() {
                 Nombre:
               </label>
               <input
+                autocomplete="off"
                 placeholder="Super astronautas 3000"
                 onChange={onInputChange}
                 className={style.text}
