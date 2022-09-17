@@ -21,10 +21,9 @@ function Games() {
   const gamesRecortado = games.length <= 15 ? games : games.slice(primerJuego, ultimoJuego);
 
   
-  
   useEffect(() => {
     ref.current?.scrollIntoView({behavior: 'smooth'});
-    if (!games.length) dispatch(fetchGames());
+    dispatch(fetchGames());
   }, []);
 
   const previousPage = () => {
@@ -56,7 +55,7 @@ function Games() {
 
                     <div className={style.generalContainer}>
                         <div className={style.cardsContainer}>
-                            {(Array.isArray(gamesRecortado) ? gamesRecortado?.map(game => {
+                            {(gamesRecortado.length ? gamesRecortado?.map(game => {
                                 return <Link key={game.id} className={style.link} to={`/home/${game.id}`}>
                                         <Game 
                                           image={game.image ? game.image : mario }

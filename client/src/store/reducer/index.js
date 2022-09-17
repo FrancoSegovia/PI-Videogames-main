@@ -10,6 +10,7 @@ import {
   RATING_DESCENDENTE,
   SEARCH_GAMES,
   SORT,
+  SORT_CLEANER,
 } from "../actions";
 
 const initialState = {
@@ -51,18 +52,17 @@ const reducer = (state = initialState, { type, payload }) => {
       else orderedGames = [...state.games];
 
       orderedGames = orderedGames.sort((a, b) => {
-        if (payload === ALFA_ASCENDENTE || payload === ALFA_DESCENDENTE) {
-          if (a.name < b.name) return payload === ALFA_ASCENDENTE ? -1 : 1;
-          if (a.name > b.name) return payload === ALFA_ASCENDENTE ? 1 : -1;
-        }
-        if (payload === RATING_ASCENDENTE || payload === RATING_DESCENDENTE) {
-          if (a.rating < b.rating)
-            return payload === RATING_ASCENDENTE ? 1 : -1;
-          if (a.rating > b.rating)
-            return payload === RATING_ASCENDENTE ? -1 : 1;
-        }
-        return 0;
-      });
+          if (payload === ALFA_ASCENDENTE || payload === ALFA_DESCENDENTE) {
+            if (a.name < b.name) return payload === ALFA_ASCENDENTE ? -1 : 1;
+            if (a.name > b.name) return payload === ALFA_ASCENDENTE ? 1 : -1;
+          }
+          if (payload === RATING_ASCENDENTE || payload === RATING_DESCENDENTE) {
+            if (a.rating < b.rating) return payload === RATING_ASCENDENTE ? 1 : -1;
+            if (a.rating > b.rating) return payload === RATING_ASCENDENTE ? -1 : 1;
+          }
+  
+          return 0;
+        });
 
       return {
         ...state,
@@ -87,9 +87,15 @@ const reducer = (state = initialState, { type, payload }) => {
       let createdGames = [...state.games];
       createdGames = createdGames.filter(game => game.id?.toString().length > 6);
 
+      let filtroActual;
+
+      if (payload === "TODOS") filtroActual = state.games;
+      else if (payload === "EXTERNOS") filtroActual = [...state.games].filter(game => game.id?.toString().length <= 6);
+      else if (payload === "CREADOS POR TI") filtroActual = createdGames;
+
       return {
         ...state,
-        filteredGames: payload === "TODOS" ? state.games : createdGames,
+        filteredGames: filtroActual,
       };
 
     default:

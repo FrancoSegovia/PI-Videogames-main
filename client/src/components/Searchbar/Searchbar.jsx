@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import style from "../style/Searchbar.module.css";
 import { useDispatch, useSelector } from 'react-redux';
-import { ALFA_ASCENDENTE, ALFA_DESCENDENTE, RATING_ASCENDENTE, RATING_DESCENDENTE } from '../../store/actions';
+import { ALFA_ASCENDENTE, ALFA_DESCENDENTE, RATING_ASCENDENTE, RATING_DESCENDENTE, SORT_CLEANER } from '../../store/actions';
 import { searchGames, sort, filterGameGenre, getGenres, filterGameCreated } from '../../store/actions';
 
 
@@ -58,9 +58,9 @@ function Searchbar() {
                 <div className={style.filtros}>
                   <div className={style.containerAlfaExist}>
                       <div className={style.filtroYLabel}>
-                        <label htmlFor="">ORDEN ALFABÉTICO/RATING</label>
+                        <label htmlFor="">ORDENAMIENTOS</label>
                         <select className={style.selector} name="" id="" onChange={onAscDescFilterChange}>
-                            <option value="Filter">TIPO DE FILTRO</option>
+                            <option value={SORT_CLEANER}>ORDENAMIENTO</option>
                             <option value={ALFA_ASCENDENTE}>A-Z</option>
                             <option value={ALFA_DESCENDENTE}>Z-A</option>
                             <option value={RATING_ASCENDENTE}>RATING +</option>
@@ -68,15 +68,16 @@ function Searchbar() {
                         </select>
                       </div>
                       <div className={style.filtroYLabel}>
-                        <label htmlFor=""> TODOS/CREADO </label>
+                        <label htmlFor=""> FILTRO POR ORIGEN </label>
                         <select onChange={onCreatedFilterChange} className={style.selector} name="" id="">
-                            <option value="TODOS">TODOS</option>
+                            <option value="TODOS">ORIGEN</option>
+                            <option value="EXTERNOS">EXTERNOS</option>
                             <option value="CREADOS POR TI">CREADOS POR TI</option>
                         </select>
                       </div>
                   </div>
                   <div className={style.filtroYLabel}>
-                    <label htmlFor=""> GÉNERO </label>
+                    <label htmlFor=""> FILTRO POR GÉNERO </label>
                     <select onChange={onGenreFilterChange} className={style.genreSelector} name="" id="">
                       <option value="Genre">GÉNERO</option>
                         {

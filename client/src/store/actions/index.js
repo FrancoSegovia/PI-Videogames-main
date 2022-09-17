@@ -6,6 +6,7 @@ export const GET_GENRES = 'GET_GENRES';
 export const POST_GAME = 'POST_GAME';
 export const SORT = 'SORT';
 
+export const SORT_CLEANER = 'SORT_CLEANER';
 export const ALFA_ASCENDENTE = 'ALFA_ASCENDENTE';
 export const ALFA_DESCENDENTE = 'ALFA_DESCENDENTE';
 export const RATING_ASCENDENTE = 'RATING_ASCENDENTE';

@@ -14,7 +14,10 @@
 .filtros {
     display: flex;
     flex-direction:row ;
+    
+    margin-top: -4px;
 }
+
 
 .filtroYLabel {
     text-shadow: #FFF 0px 0px 1px, #FFF 0px 0px 1px, #FFF 0px 0px 1px, #FF2D95 0px 0px 1px, #FF2D95 0px 0px 1px, #FF2D95 0px 0px 2px, #FF2D95 0px 0px 2px, #FF2D95 0px 0px 10px;
@@ -94,8 +97,8 @@
 }
 
 .selector {
+    width: 150px;
     border-radius: 5px;
-
     color: white;
     background-color: purple;
     margin-left: 5px;

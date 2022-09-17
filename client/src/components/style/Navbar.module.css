@@ -75,6 +75,7 @@
 
 
 .list {
+    margin-left: 50px;
     margin-top: 0;
     width: 310px;
     height: 85px;
@@ -85,7 +86,7 @@
     text-decoration: none;
     display: flex;
     flex-direction: row;
-    gap: 25px;
+    gap: 20px;
     align-items: center;
 }
 

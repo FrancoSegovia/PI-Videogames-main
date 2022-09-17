@@ -190,7 +190,7 @@ function CreateGame() {
               />
 
               <label htmlFor="" className={style.labels}>
-                Rating:
+                Rating: (0-5)
               </label>
               <input
                 onChange={onInputChange}
