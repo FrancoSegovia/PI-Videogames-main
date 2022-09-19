@@ -5,7 +5,7 @@ import { useEffect, useState, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchGames } from '../../store/actions'
 import { Link } from 'react-router-dom';
-import mario from '../../img/mario3.jpg';
+import mario from '../../img/mario3.webp';
 
 function Games() {
   let games = useSelector(state => state.filteredGames);
@@ -55,7 +55,7 @@ function Games() {
 
                     <div className={style.generalContainer}>
                         <div className={style.cardsContainer}>
-                            {(gamesRecortado.length ? gamesRecortado?.map(game => {
+                            {(Array.isArray(gamesRecortado) && gamesRecortado.length ? gamesRecortado?.map(game => {
                                 return <Link key={game.id} className={style.link} to={`/home/${game.id}`}>
                                         <Game 
                                           image={game.image ? game.image : mario }
