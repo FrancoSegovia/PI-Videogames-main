@@ -34,12 +34,12 @@
   <img height="200" src="./sshots/Screenshot_5.png" />
 </p>
 
-<h3 align="center">Página de creación</h3>
+<h3 align="center">Página de detalles</h3>
 <p align="center">
   <img height="200" src="./sshots/Screenshot_6.png" />
 </p>
 
-<h3 align="center">Página de detalles</h3>
+<h3 align="center">Página de creación</h3>
 <p align="center">
   <img height="200" src="./sshots/Screenshot_7.png" />
 </p>
