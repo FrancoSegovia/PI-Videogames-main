@@ -26,7 +26,7 @@
 <h2>Mobile</h2>
 <h3 align="center">Página de aterrizaje (Landing Page)</h3>
 <p align="center">
-  <img height="200" src="./sshots/Screenshot_5.png" />
+  <img height="200" src="./sshots/Screenshot_8.png" />
 </p>
 
 <h3 align="center">Página de inicio</h3>
