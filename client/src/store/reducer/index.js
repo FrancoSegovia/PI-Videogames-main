@@ -9,8 +9,7 @@ import {
   RATING_ASCENDENTE,
   RATING_DESCENDENTE,
   SEARCH_GAMES,
-  SORT,
-  SORT_CLEANER,
+  SORT
 } from "../actions";
 
 const initialState = {

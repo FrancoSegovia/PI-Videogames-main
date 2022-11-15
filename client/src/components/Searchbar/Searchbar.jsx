@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import style from "../style/Searchbar.module.css";
-import { useDispatch, useSelector } from 'react-redux';
-import { ALFA_ASCENDENTE, ALFA_DESCENDENTE, RATING_ASCENDENTE, RATING_DESCENDENTE, SORT_CLEANER } from '../../store/actions';
-import { searchGames, sort, filterGameGenre, getGenres, filterGameCreated } from '../../store/actions';
+import { useDispatch } from 'react-redux';
+import { searchGames } from '../../store/actions';
 
 
 

@@ -32,7 +32,7 @@ function CreateGame() {
   useEffect(() => {
     dispatch(getGenres());
     dispatch(fetchGames());
-  }, []);
+  }, [dispatch]);
 
   function onGenreCheckboxClick(e) {
     // if (newGame.genres.length )

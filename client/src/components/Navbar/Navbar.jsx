@@ -28,7 +28,7 @@ function Navbar() {
     return () => {
       window.removeEventListener("resize", screenWidthUpdater);
     }
-  }, [])
+  }, [dispatch])
 
   let onClick = e => {
     e.preventDefault();

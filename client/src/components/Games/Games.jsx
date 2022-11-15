@@ -24,7 +24,7 @@ function Games() {
   useEffect(() => {
     ref.current?.scrollIntoView({behavior: 'smooth'});
     dispatch(fetchGames());
-  }, []);
+  }, [dispatch]);
 
   const previousPage = () => {
     if (paginaActual === 1) setPaginaActual(1);
