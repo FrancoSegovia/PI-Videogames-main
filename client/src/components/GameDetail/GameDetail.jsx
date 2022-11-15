@@ -16,7 +16,7 @@ function GameDetail(props) {
         .then(game => setGame(game.data));
         
         return () => setGame(null);
-    }, []);
+    }, [gameId]);
     
   return (
     <div>
