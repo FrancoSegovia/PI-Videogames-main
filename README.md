@@ -1,10 +1,49 @@
 ![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
 
-# Individual Project - Henry Videogames
+# Proyecto Individual - Videojuegos (Henry Bootcamp)
 
+<h2>Desktop</h2>
+<h3 align="center">Página de aterrizaje (Landing Page)</h3>
 <p align="center">
-  <img height="200" src="./videogame.png" />
+  <img margin:0 auto" height="200" src="./sshots/Screenshot_1.png" />
 </p>
+
+<h3 align="center">Página principal</h3>
+<p align="center">
+  <img height="200" src="./sshots/Screenshot_2.png" />
+</p>
+
+<h3 align="center">Página de creación</h3>
+<p align="center">
+  <img height="200" src="./sshots/Screenshot_3.png" />
+</p>
+
+<h3 align="center">Página de detalles</h3>
+<p align="center">
+  <img height="200" src="./sshots/Screenshot_4.png" />
+</p>
+
+<h2>Mobile</h2>
+<h3 align="center">Página de aterrizaje (Landing Page)</h3>
+<p align="center">
+  <img height="200" src="./sshots/Screenshot_5.png" />
+</p>
+
+<h3 align="center">Página de inicio</h3>
+<p align="center">
+  <img height="200" src="./sshots/Screenshot_5.png" />
+</p>
+
+<h3 align="center">Página de creación</h3>
+<p align="center">
+  <img height="200" src="./sshots/Screenshot_6.png" />
+</p>
+
+<h3 align="center">Página de detalles</h3>
+<p align="center">
+  <img height="200" src="./sshots/Screenshot_7.png" />
+</p>
+
 
 ## Objetivos del Proyecto
 
